@@ -340,10 +340,10 @@ class Handler:
         nbase2 = []
 
         for i in base:
-            nbase1.append(((i^int(pub[0]))%int(pub[1]))%29)
+            nbase1.append((pow(i,int(priv[0]),int(priv[1])))%29)
         
         for i in base2:
-            nbase2.append(((i^int(pub[0]))%int(pub[1]))%29)
+            nbase2.append((pow(i,int(priv[0]),int(priv[1])))%29)
 
         nbase1str = ""
         for res in nbase1:
@@ -412,10 +412,10 @@ class Handler:
         nbase2 = []
 
         for i in base:
-            nbase1.append(((i^int(priv[0]))%int(priv[1]))%29)
+            nbase1.append((pow(i,int(priv[0]),int(priv[1])))%29)
         
         for i in base2:
-            nbase2.append(((i^int(priv[0]))%int(priv[1]))%29)
+            nbase2.append((pow(i,int(priv[0]),int(priv[1])))%29)
 
         nbase1str = ""
         for res in nbase1:
